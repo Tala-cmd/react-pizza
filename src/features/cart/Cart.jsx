@@ -10,7 +10,7 @@ const fakeCart = [
   },
   {
     pizzaId: 6,
-    name: 'Vegetale',
+    name: 'Vegetable',
     quantity: 1,
     unitPrice: 13,
     totalPrice: 13,
@@ -31,7 +31,7 @@ function Cart() {
     <div>
       <Link to="/menu">&larr; Back to menu</Link>
 
-      <h2>Your cart, %NAME%</h2>
+      <h2>Your cart, %TALA%</h2>
 
       <div>
         <Link to="/order/new">Order pizzas</Link>

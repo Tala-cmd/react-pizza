@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Button from '../../ui/Button';
 
 function CreateUser() {
   const [username, setUsername] = useState('');
@@ -12,7 +13,7 @@ function CreateUser() {
       <p className='mb-4 text-sm text-stone-600 md:text-base'>👋 Welcome! Please start by telling us your name:</p>
 
       <input
-        className='w-72'
+        className='mb-8 w-72 input'
         type="text"
         placeholder="Your full name"
         value={username}
@@ -21,7 +22,7 @@ function CreateUser() {
 
       {username !== '' && (
         <div>
-          <button>Start ordering</button>
+          <Button>Start Ordering</Button>
         </div>
       )}
     </form>

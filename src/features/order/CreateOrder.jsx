@@ -86,6 +86,7 @@ function CreateOrder() {
 
         <div>
           <Button 
+            type='primary'
             disabled={isSubmitting}>
             {isSubmitting ? 'Placing order...' : 'Order now'}
           </Button>

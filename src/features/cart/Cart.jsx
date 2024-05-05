@@ -39,13 +39,13 @@ function Cart() {
 
       <ul className='mt-3 border-b divide-y divide-stone-200'>
         {cart.map((item)=>(
-        <CartItem key={item.key} item={item} /> ))}
+        <CartItem key={item.pizzaId} item={item} /> ))}
       </ul>
       
       <div className='mt-6 space-x-2'>
         <Button type='primary' to='/order/new'>Order pizzas</Button>
         <Button type='secondary'>Clear Cart</Button>
-        
+
       </div>
     </div>
   );

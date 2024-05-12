@@ -5,6 +5,7 @@ import { getOrder } from "../../services/apiRestaurant";
 import { calcMinutesLeft, formatCurrency, formatDate } from "../../utilities/helpers";
 import OrderItem from "./OrderItem";
 import { useEffect } from "react";
+import UpdateOrder from "./UpdateOrder";
 
 function Order() {
   const order = useLoaderData()
@@ -26,7 +27,6 @@ function Order() {
       fetcher.load('/menu')
   }, [fetcher])
 
-  console.log(fetcher)
   const deliveryIn = calcMinutesLeft(estimatedDelivery);
 
   return (
@@ -66,6 +66,7 @@ function Order() {
         {priority && <p className="text-sm font-medium text-stone-600">Price priority: {formatCurrency(priorityPrice)}</p>}
         <p className="font-bold">To pay on delivery: {formatCurrency(orderPrice + priorityPrice)}</p>
       </div>
+      {!priority && <UpdateOrder order={order}/>}
     </div>
   );
 }
